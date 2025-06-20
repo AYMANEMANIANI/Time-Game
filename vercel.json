@@ -1,5 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/page_acceil/index.html" }
-  ]
+  "public": "public"
 }
