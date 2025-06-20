@@ -1,0 +1,263 @@
+@font-face{
+    font-family: "myfont";
+    src: url("../font/AvengeanceHeroicAvengerBold-MM2J.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    height: 1100px;
+}
+/* alert */
+#alert_lang{
+    width: 400px;
+    height: 100%;
+    border: 2px solid #6facea;
+    border-radius: 20px;
+    background: #f0f8ff;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    z-index: 10000;
+    visibility: hidden;
+    transition: transform 1s linear, top 1s linear ;
+}
+#alert_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#alert_lang #alert_icon{
+    font-size: 25px;
+    color: #6facea;
+    padding-top: 2px;
+}
+#alert_lang #alert_titre{
+    font-size: 12px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 10px;
+}
+#alert_btn{
+    font-weight: 900;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #93c9ff;
+}
+#alert_btn:hover{
+    scale: 1.1;
+
+}
+/* header */
+.header{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background:#add8e6 ;
+    box-shadow: #26394d 2px 8px 8px -10px;
+}
+.list_header{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* logo de header */
+.list_header  #logo{
+    width: 130px;
+    height: 100px;
+}
+/* link de header */
+.list_header li{
+    list-style: none;
+    position: relative;
+}
+.list_header a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.4s ease;
+}
+.list_header a:hover{
+    color: #41917c;
+}
+.list_header a:hover::after{
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #68b19f;
+    position: absolute;
+    left: 1px;
+    bottom: -3px;
+    animation: lien 0.4s linear;
+}
+@keyframes lien{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.list_header .liste{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* select de langue */
+#lang{
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+select option{
+    background:#add8e6 ;
+}
+/* icone de music */
+#liste #audio{
+    display: none;
+}
+#icon_music{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* section */
+section{
+    width: 100%;
+    height: 100%;
+    background-color: #f0fafa;
+    
+}
+/* article 1 */
+#article1 #titre1{
+    font-size: 200px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    letter-spacing: 15px;
+}
+
+#article1{
+   padding-top: 250px;
+   display: flex;
+   justify-content: center;
+   
+}
+#article1 h1{
+    font-family: "myfont";
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+#btn_jouer{
+    width: 380px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 1s ease;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #d4fff4;
+}
+#btn_jouer:hover{
+    background-color: #ffffffee;
+    width:480px ;
+}
+#link_jouer{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+/* aeticle 2 */
+#article2 img{
+    width: 1000px;
+    position: relative;
+    top:-13px ;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*  */
+
+#article3 {
+    margin: 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*  */
+
+#article4 #clock{
+    width: 150px;
+    position: absolute;
+    top: 230px;
+    left: 36%;
+}
+  
+.section {
+    flex: 1 1 300px;
+    padding: 40px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    text-align: left;
+}
+  
+h2 {
+color: #333;
+}
+
+p {
+color: #666;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    overflow: hidden;  
+    background-color:  #f5f518;
+    background:#add8e6 ;
+    box-shadow: #26394d 2px -5px 10px -10px;
+}
+.footer_container{
+    width: 100%;
+    height: 90px;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+#div_propos{
+    width: 200px;
+}
+#div_propos  a{
+    font-size: 16px;
+}
+
+#copyrite{
+   margin: 30px 0px 0px 5px ;
+   font-size: 16px;
+}
+/* respensive page */
+@media (max-width: 620px){
+    #article2 img{
+        width: 400px;
+        bottom: -88px;
+    }
+}
+

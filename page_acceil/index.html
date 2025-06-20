@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chronoKids</title>
+    <!-- lien de fichier css -->
+    <link rel="stylesheet" href="style.css">
+     <!-- font-awesome cdn -->
+     <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+    <!-- alert -->
+    <div id="alert_lang">
+        <div id="alert_content">
+            <i id="alert_icon" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <h1 id="alert_titre">Oops! <br>La traduction du site est temporairement inaccessible. <br>
+                Merci pour votre patience et compréhension.
+            </h1>
+            <button id="alert_btn" onclick="alert_btn()">OK</button>
+        </div>
+    </div>
+    <!-- audios -->
+    <audio id="audio_succ" src="../audio_projet/succ.mp3" ></audio>
+    <audio id="audio_fail" src="../audio_projet/fail.mp3" ></audio>
+    
+    <!-- header de page -->
+    <header class="header">
+        <nav>
+            <ul class="list_header">
+                <li><img id="logo" src="../img_projet/logo.png" alt=""></a></li>
+                <div class="liste">
+                    <li><a href="../page_acceil/acceil.html">acceill</a></li>
+                    <li><a href="index.html">jeu</a></li>
+                    <li>
+                        <select title="language" onchange="alt_lang()" id="lang">
+                            <option value="">FR</option>
+                            <option value="">EN</option>
+                            <option value="">AR</option>
+                        </select>
+                    </li>
+                    <li><audio id="audio" src="../audio_projet/audio1.mp3"  loop></audio></li>
+                    <li><i title="musique" id="icon_music"  class="fa-regular fa-circle-play"></i></li>
+                    <li><button title="vider le progression" id="vider" onclick="f()">vider 0/5</button></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!-- vid félicitation -->
+    <div>
+        <video id="win" src="../img_projet/win_video2.webm"></video>
+    </div>
+<section id="section_body">
+    <!-- titre de jeu -->
+    <div class="titre"><h1>Heure Facile</h1></div>
+    <!-- section contien une horloge et qst de défi -->
+    <div class="container">
+        <div class="clock">
+            <div class="clockwise hours" id="hour"></div>
+            <div class="clockwise minute" id="min"></div>
+            <div class="number number1">.<div>1</div></div>
+            <div class="number number2">.<div>2</div></div>
+            <div class="number number3">.<div>3</div></div>
+            <div class="number number4">.<div>4</div></div>
+            <div class="number number5">.<div>5</div></div>
+            <div class="number number6">.<div>6</div></div>
+            <div class="number number7">.<div>7</div></div>
+            <div class="number number8">.<div>8</div></div>
+            <div class="number number9">.<div>9</div></div>
+            <div class="number number10">.<div>10</div></div>
+            <div class="number number11">.<div>11</div></div>
+            <div class="number number12">.<div>12</div></div>
+        </div>
+        <div class="question">
+            <p>placer les aiguilles dans à l'heure correcte ?<br><span></span>h : <span></span>min</p>
+            <div class="direction">
+                <div class="clockwises">
+                    <button title="deplacer aiguille de minute dans le sens anti_horaire" id="btn btn1">&lt;</button>
+                    <img class="img_clockwises" src="../img_projet/5.png" alt="img">
+                    <button title="deplacer aiguille de minute dans le sens horaire" id="btn btn2">&gt;</button>
+                </div>
+                <div class="clockwises">
+                    <button title="deplacer aiguille de heure dans le sens anti_horaire" id="btn btn4"><i class="fa-solid fa-minus"></i></button>
+                    <img class="img_clockwises" src="../img_projet/60.png" alt="img">
+                    <button title="deplacer aiguille de heure dans le sens horaire" id="btn btn3"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="article_res">
+        <!-- progresse de l'utilisateur dans le jeu -->
+        <div id="évaluation"><div id="progresse"></div></div>
+        <!-- btn et text vérification de ruseltat -->
+        <button id="btnVirification" onclick="virification()">virification</button>
+        <p id="resultat"></p>
+        <div id="continue"></div>
+    </div>
+</section>
+<!-- alert niveaux -->
+<!-- <div id="alert">
+    <div id="alert_content">
+        <h1 id="titre_niveau">choisir un niveau</h1>
+        <div id="parent_niveau">
+            <div class="niveau_div">
+                <input type="radio" name="niveau" id="input_N1">
+                <p class="title_niveau">niveau 1:<br> defit debutant</p>
+            </div>
+            <div class="niveau_div">
+                <input type="radio" name="niveau" id="input_N2">
+                <p class="title_niveau">niveau 2:<br> defit moyenne </p>
+            </div>
+            <div class="niveau_div">
+                <input type="radio" name="niveau" id="input_N3">
+                <p class="title_niveau">niveau 3:<br> defit avancé </p>
+            </div>
+        </div>
+        <button id="alert_btn_niveau" onclick="">OK</button>
+    </div> -->
+</div>
+    <!-- fichier script js -->
+    <script src="script.js"></script>
+    <script src="../page_acceil/acceil.js"></script>
+</body>
+</html>

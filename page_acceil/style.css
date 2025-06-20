@@ -1,0 +1,512 @@
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../font/TenOClockRegular-8L7n.ttf') ;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+/* css body */
+body{
+    height: 950px;
+    background-color: #f0fafa;
+    position: relative;
+}
+/* section_body */
+#section_body{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* alert */
+#alert_lang{
+    width: 400px;
+    height: 150px;
+    border: 2px solid #6facea;
+    border-radius: 20px;
+    background: #f0f8ff;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    z-index: 1000000;
+    visibility: hidden;
+    transition: transform 1s linear, top 1s linear ;
+}
+#alert_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#alert_lang #alert_icon{
+    font-size: 25px;
+    color: #6facea;
+    padding-top: 2px;
+}
+#alert_lang #alert_titre{
+    font-size: 12px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 10px;
+}
+#alert_btn{
+    font-weight: 900;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #93c9ff;
+}
+#alert_btn:hover{
+    scale: 1.1;
+}
+/* css header */
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background: #f5f518;
+    background:lightblue ;
+    box-shadow: rgb(38, 57, 77) 2px 8px 8px -10px;
+}
+
+.list_header{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* logo de header */
+.list_header  #logo{
+    width: 130px;
+    height: 100px;
+    transition:all 2s ease-in-out;
+}
+.list_header  #logo:active{
+    scale: 1.5;
+}
+/* link de header */
+.list_header li{
+    list-style: none;
+    position: relative;
+    
+}
+.list_header a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.4s ease;
+}
+.list_header a:hover{
+    color: #41917c;
+}
+.list_header a:hover::after{
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #68b19f;
+    position: absolute;
+    left: 1px;
+    bottom: -3px;
+    animation: lien 0.4s linear;
+}
+@keyframes lien{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.list_header .liste{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* select de langue */
+#lang{
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+select option{
+    background:#add8e6 ;
+}
+/* icone de music */
+#liste #audio{
+    display: none;
+}
+#icon_music{
+    font-size: 30px;
+    cursor: pointer;
+}
+/* titre de jeu  */
+.titre{
+    font-size: 25px;
+    font-family: 'MyFont';
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+/* btn vider */
+#vider{
+    background-color: #9bc6bb;
+    padding: 6px 10px;
+    border: none;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 15px;
+}
+#vider:hover{
+    scale: .95;
+}
+
+
+/* css de contenaire de jeu*/
+.container{
+    width: 600px;
+    height: 300px;
+    border: 8px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    resize: both;
+    overflow: hidden;
+    
+}
+/* css horloge */
+.clock{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px #000 solid;
+    background-color: #dbeaea;
+    position: relative;
+}
+/* number in horloge */
+.number{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+    font-weight: 900;
+}
+/* css rotate div de chaque nombre à horloge */
+.number1{
+    rotate: 30deg;
+}
+.number2{
+    rotate: 60deg;
+}
+.number3{
+    rotate: 90deg;
+}
+.number4{
+    rotate: 120deg;
+}
+.number5{
+    rotate: 150deg;
+}
+.number6{
+    rotate: 180deg;
+}
+.number7{
+    rotate: 210deg;
+}
+.number8{
+    rotate: 240deg;
+}
+.number9{
+    rotate: 270deg;
+}
+.number10{
+    rotate: 300deg;
+}
+.number11{
+    rotate: 330deg;
+}
+.number12{
+    rotate: 360deg;
+}
+/* rotate chaque nombre a parent div */
+.number1 div{
+    rotate: -30deg;
+}
+.number2 div{
+    rotate: -60deg;
+}
+.number3 div{
+    rotate: -90deg;
+}
+.number4 div{
+    rotate: -120deg;
+}
+.number5 div{
+    rotate: -150deg;
+}
+.number6 div{
+    rotate: -180deg;
+}
+.number7 div{
+    rotate: -210deg;
+}
+.number8 div{
+    rotate: -240deg;
+}
+.number9 div{
+    rotate: -270deg;
+}
+.number10 div{
+    rotate: -300deg;
+}
+.number11 div{
+    rotate: -330deg;
+}
+.number12 div{
+    rotate: -360deg;
+}
+/* centre de horloge */
+.clock::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 900;
+}
+/* aiguille de horloge */
+.clockwise{
+    width: 4px;
+    height: 60px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin:  bottom;
+}
+.hours{
+    width: 2px;
+    height: 40px;
+    font-weight: 900;
+    background-color: #000;
+    z-index: 700;
+}
+/* transform-origin: x,y; => determiner le point ou l'Axe de mouvement */
+.minute{
+    width: 2px;
+    height: 55px;
+    background-color: #000;
+    z-index: 800;
+}
+/* css de question */
+.question p{
+    border: solid 4px #d5eaea;
+    padding: 10px;    
+}
+.clockwises{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.img_clockwises{
+    width: 30px;
+}
+.direction button{
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    background: #d5eaea;
+    border:#000 1px solid;
+    cursor: pointer;
+    transition: 1s ease-in;
+    color:#03b1f7;
+}
+.direction button:nth-child(2){
+    font-weight: bold;
+}
+/* button d'itulisateur */
+.direction button:hover{
+    background: #c6e7eb;
+    border:1px solid #8ababe ;
+    scale: 0.99;
+    
+}
+span{
+    color: #68b19f;
+    font-weight: 900;
+    font-size: 20px;
+}
+/* article div de resultat */
+#article_res{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+/* btn virification */
+#btnVirification{
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: #68b19f;
+    color: #ffffff;
+    font-size: 20px;
+    font-family:fantasy;
+    letter-spacing: 0.9px;
+    border: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+#btnVirification:hover{
+    letter-spacing: 2px;
+    background-color: #8ababe;
+    color: #000;
+}
+/* resultat */
+#resultat{
+    margin: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+#resultat:hover{
+    rotate: 2deg;
+}
+/* css button de continue */
+#btn_continue{
+    padding: 4px 50px;
+    font-size: 15px;
+    border: 2px solid;
+    border-radius: 800px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: 1s ease ;
+}
+#btn_continue:hover{
+    background-color: #d9e6e382;
+}
+/* évaluation */
+#évaluation{
+    box-shadow:  18px 18px 27px #c5c5c5,-18px -18px 27px #fbfbfb;
+    width: 590px;
+    height: 10px;
+    position: relative;
+    z-index: -1;
+    top: 10px;
+    border-radius: 10px;
+    background-color: #dadada;
+}
+#évaluation #progresse{
+    background: #2ede2e;
+    border-radius: 10px;
+    width: 0%;
+    height: 10px;
+}
+/* respensive page */
+@media (max-width: 660px){
+    body{
+        height: 900px;
+    }
+    .container{
+        width: 400px;
+        height: 450px;
+        flex-direction: column;
+    }
+    #évaluation{
+       display: none;
+    }
+    /* btn virification */
+    #btnVirification{
+        width: 250px;
+    }
+}
+/* win video */
+#parent_win{
+   display: none;
+}
+#win{
+    width: 100%;
+    height: 580px;
+    padding-top: 100px;
+
+}
+/* supp section jeu */
+#sec_jeu{
+    display: none;
+}
+
+/* alert niveaux */
+#alert{
+    width: 100%;
+    height: 220px;
+    background:lightblue ;
+    position: absolute;
+    bottom: 0;
+}
+#titre_niveau{
+    font-size: 28px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 10px;
+}
+#alert_content{
+    width: 100%;
+}
+#parent_niveau{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#parent_niveau .niveau_div{
+    margin: 20px;
+}
+#parent_niveau .niveau_div input{
+    height: 30px;
+    width: 30px;
+    margin: 0px 80px;
+    accent-color: #2ede2e;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+#parent_niveau .niveau_div .title_niveau{
+    width: 200px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+#alert_btn_niveau{
+    font-weight: 900;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2ede2e;
+}
+#alert_btn_niveau:hover{
+    scale: 1.1;
+}
