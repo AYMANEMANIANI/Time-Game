@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chronoKids</title>
     <!-- lien de fichier css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
      <!-- font-awesome cdn -->
      <link
         rel="stylesheet"
@@ -24,17 +24,17 @@
         </div>
     </div>
     <!-- audios -->
-    <audio id="audio_succ" src="../audio_projet/succ.mp3" ></audio>
-    <audio id="audio_fail" src="../audio_projet/fail.mp3" ></audio>
+    <audio id="audio_succ" src="./assests/audio_projet/succ.mp3" ></audio>
+    <audio id="audio_fail" src="./assests/audio_projet/fail.mp3" ></audio>
     
     <!-- header de page -->
     <header class="header">
         <nav>
             <ul class="list_header">
-                <li><img id="logo" src="../img_projet/logo.png" alt=""></a></li>
+                <li><img id="logo" src="./assests/img_projet/logo.png" alt=""></a></li>
                 <div class="liste">
-                    <li><a href="../page_acceil/acceil.html">acceill</a></li>
-                    <li><a href="index.html">jeu</a></li>
+                    <li><a href="./index.html">acceill</a></li>
+                    <li><a href="./game.html">jeu</a></li>
                     <li>
                         <select title="language" onchange="alt_lang()" id="lang">
                             <option value="">FR</option>
@@ -42,7 +42,7 @@
                             <option value="">AR</option>
                         </select>
                     </li>
-                    <li><audio id="audio" src="../audio_projet/audio1.mp3"  loop></audio></li>
+                    <li><audio id="audio" src="./assests/audio_projet/audio1.mp3"  loop></audio></li>
                     <li><i title="musique" id="icon_music"  class="fa-regular fa-circle-play"></i></li>
                     <li><button title="vider le progression" id="vider" onclick="f()">vider 0/5</button></li>
                 </div>
@@ -51,7 +51,7 @@
     </header>
     <!-- vid félicitation -->
     <div>
-        <video id="win" src="../img_projet/win_video2.webm"></video>
+        <video id="win" src="./assests/img_projet/win_video2.webm"></video>
     </div>
 <section id="section_body">
     <!-- titre de jeu -->
@@ -79,12 +79,12 @@
             <div class="direction">
                 <div class="clockwises">
                     <button title="deplacer aiguille de minute dans le sens anti_horaire" id="btn btn1">&lt;</button>
-                    <img class="img_clockwises" src="../img_projet/5.png" alt="img">
+                    <img class="img_clockwises" src="./assests/img_projet/5.png" alt="img">
                     <button title="deplacer aiguille de minute dans le sens horaire" id="btn btn2">&gt;</button>
                 </div>
                 <div class="clockwises">
                     <button title="deplacer aiguille de heure dans le sens anti_horaire" id="btn btn4"><i class="fa-solid fa-minus"></i></button>
-                    <img class="img_clockwises" src="../img_projet/60.png" alt="img">
+                    <img class="img_clockwises" src="./assests/img_projet/60.png" alt="img">
                     <button title="deplacer aiguille de heure dans le sens horaire" id="btn btn3"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
@@ -121,7 +121,7 @@
     </div> -->
 </div>
     <!-- fichier script js -->
-    <script src="script.js"></script>
-    <script src="../page_acceil/acceil.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/acceil.js"></script>
 </body>
 </html>
