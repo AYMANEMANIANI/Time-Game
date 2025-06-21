@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'MyFont';
     src: url('../assests/font/TenOClockRegular-8L7n.ttf') ;
@@ -12,6 +11,7 @@
 }
 /* css body */
 body{
+    font-family: 'Poppins', sans-serif;
     height: 950px;
     background-color: #f0fafa;
     position: relative;
@@ -68,90 +68,100 @@ body{
 #alert_btn:hover{
     scale: 1.1;
 }
-/* css header */
-.header{
-    position: absolute;
-    top: 0;
+/* Header Styles (Unified with acceilStyle.css) */
+.header {
     width: 100%;
-    height: 50px;
-    font-size: 20px;
-    background: #f5f518;
-    background:lightblue ;
-    box-shadow: rgb(38, 57, 77) 2px 8px 8px -10px;
+    padding: 0 5%;
+    background: #add8e6; /* Lightblue from game.html */
+    color: #34495e; /* Dark text for light background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.list_header{
-    height: 50px;
+.list_header {
+    height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    list-style: none;
 }
-/* logo de header */
-.list_header  #logo{
-    width: 130px;
-    height: 100px;
-    transition:all 2s ease-in-out;
+
+.list_header #logo {
+    width: 120px;
+    height: auto;
+    vertical-align: middle;
 }
-.list_header  #logo:active{
-    scale: 1.5;
+
+.list_header .liste {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
-/* link de header */
-.list_header li{
+
+.list_header li {
     list-style: none;
     position: relative;
-    
 }
-.list_header a{
+
+.list_header a {
     text-decoration: none;
-    color: #000;
-    transition: all 0.4s ease;
+    color: #34495e; /* Dark text */
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s;
 }
-.list_header a:hover{
-    color: #41917c;
-}
-.list_header a:hover::after{
+
+.list_header a::after {
     content: "";
-    width: 90%;
+    width: 0;
     height: 2px;
-    background-color: #68b19f;
+    background-color: #41917c; /* Game accent color for underline */
     position: absolute;
-    left: 1px;
-    bottom: -3px;
-    animation: lien 0.4s linear;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease;
 }
-@keyframes lien{
-    0%{
-        width: 0px;
-    }
-    100%{
-        width: 100%;
-    }
+
+.list_header a:hover {
+    color: #41917c; /* Game accent color */
 }
-.list_header .liste{
-    width: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+.list_header a:hover::after {
+    width: 100%;
 }
-/* select de langue */
-#lang{
-    font-size: 20px;
-    text-align: center;
+
+/* Language Selector */
+#lang {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
     border: none;
     outline: none;
     background: transparent;
-}
-select option{
-    background:#add8e6 ;
-}
-/* icone de music */
-#liste #audio{
-    display: none;
-}
-#icon_music{
-    font-size: 30px;
+    color: #34495e; /* Dark text */
     cursor: pointer;
 }
+
+select option {
+    background: #ffffff;
+    color: #34495e;
+}
+
+/* Music Icon */
+#icon_music {
+    font-size: 28px;
+    cursor: pointer;
+    color: #34495e; /* Dark text */
+    transition: color 0.3s;
+}
+
+#icon_music:hover {
+    color: #41917c; /* Game accent color */
+}
+
 /* titre de jeu  */
 .titre{
     font-size: 25px;
@@ -159,7 +169,6 @@ select option{
     text-align: center;
     letter-spacing: 2px;
 }
-
 
 /* btn vider */
 #vider{
@@ -174,12 +183,11 @@ select option{
     scale: .95;
 }
 
-
 /* css de contenaire de jeu*/
 .container{
-    width: 600px;
+    width: 700px;
     height: 300px;
-    border: 8px solid;
+    border: 6px solid #2a3f54;
     display: flex;
     justify-content: space-around;
     align-items: center;

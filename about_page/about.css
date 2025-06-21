@@ -1,188 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body{
-  user-select: none;
-  position: relative;
-}
-/* alert */
-#alert_lang{
-  width: 400px;
-  height: 150px;
-  border: 2px solid #6facea;
-  border-radius: 20px;
-  background: #f0f8ff;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%,-50%) scale(0.1);
-  z-index: 10000;
-  visibility: hidden;
-  transition: transform 1s linear, top 1s linear ;
-}
-#alert_content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#alert_lang #alert_icon{
-  font-size: 25px;
-  color: #6facea;
-  padding-top: 2px;
-}
-#alert_lang #alert_titre{
-  font-size: 12px;
-  font-family: monospace;
-  text-align: center;
-  padding-top: 10px;
-}
-#alert_btn{
-  font-weight: 900;
-  width: 80px;
-  height: 30px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #93c9ff;
-}
-#alert_btn:hover{
-  scale: 1.1;
-
-}
-/* css header */
-.header{
-  width: 100%;
-  height: 50px;
-  font-size: 20px;
-  background:#add8e6 ;
-  box-shadow: #26394d 2px 8px 8px -10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.list_header{
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  
-}
-/* logo de header */
-.list_header  #logo{
-  width: 130px;
-  height: 100px;
+body {
+    background-color: #f0fafa; /* Same as game page */
+    color: #34495e;
+    line-height: 1.6;
 }
 
-/* link de header */
-.list_header li{
-  list-style: none;
-  position: relative;
-}
-.list_header a{
-  text-decoration: none;
-  color: #000;
-  transition: all 0.4s ease;
-}
-.list_header a:hover{
-  color: #41917c;
-}
-.list_header a:hover::after{
-  content: "";
-  width: 90%;
-  height: 2px;
-  background-color: #68b19f;
-  position: absolute;
-  left: 1px;
-  bottom: -3px;
-  animation: lien 0.4s linear;
-}
-@keyframes lien{
-  0%{
-      width: 0px;
-  }
-  100%{
-      width: 100%;
-  }
-}
-.list_header .liste{
-  width: 300px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-/* select de langue */
-#lang{
-  font-size: 20px;
-  text-align: center;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-select option{
-  background:#add8e6 ;
-}
-/* icone de music */
-#liste #audio{
-  display: none;
-}
-#icon_music{
-  font-size: 30px;
-  cursor: pointer;
-}
-/* section de page  */
-
-.container {
-  margin: 40px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Alert Styles (from game.html's style.css) */
+#alert_lang {
+    width: 400px;
+    height: 150px;
+    border: 2px solid #6facea;
+    border-radius: 20px;
+    background: #f0f8ff;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    z-index: 1000000;
+    visibility: hidden;
+    transition: transform 1s linear, top 1s linear;
 }
 
-.section {
-  flex: 1 1 300px;
-  padding: 40px;
-  margin: 10px;
-  background-color: #f2f2f2;
-  border-radius: 8px;
-  text-align: left;
+#alert_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-h2 {
-  color: #333;
+#alert_lang #alert_icon {
+    font-size: 25px;
+    color: #6facea;
+    padding-top: 2px;
 }
 
-p {
-  color: #666;
-}
-/* footer */
-.footer{
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  background-color:  #f5f518;
-  background:#add8e6 ;
-  box-shadow: rgb(38, 57, 77) 2px -5px 10px -10px;
-  
-}
-.footer_container{
-  width: 100%;
-  height: 90px;
-  margin: 20px 0px 0px 0px;
-  display: flex;
-  justify-content: space-around;
-  align-items: start;
-}
-#div_propos{
-  width: 200px;
-}
-#div_propos  a{
-  font-size: 16px;
+#alert_lang #alert_titre {
+    font-size: 12px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 10px;
 }
 
-#copyrite{
- margin: 30px 0px 0px 5px ;
- font-size: 16px;
+#alert_btn {
+    font-weight: 900;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #93c9ff;
+}
+
+#alert_btn:hover {
+    scale: 1.1;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    padding: 0 5%;
+    background: #add8e6;
+    color: #34495e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.list_header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.list_header #logo {
+    width: 120px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.list_header .liste {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.list_header a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+}
+
+.list_header a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #41917c;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease;
+}
+
+.list_header a:hover {
+    color: #41917c;
+}
+
+.list_header a:hover::after {
+    width: 100%;
+}
+
+#lang {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #34495e;
+    cursor: pointer;
+}
+
+#icon_music {
+    font-size: 28px;
+    cursor: pointer;
+    color: #34495e;
+    transition: color 0.3s;
+}
+
+#icon_music:hover {
+    color: #41917c;
+}
+
+/* Main Content Styling */
+.about-section {
+    padding: 4rem 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 3rem;
+}
+
+.about-content h2 {
+    color: #41917c;
+    margin-bottom: 1rem;
+}
+
+.team-section {
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #41917c;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 4rem 8%;
+    text-align: left;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #41917c;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #bdc3c7;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #41917c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #52bba3;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: #bdc3c7;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #41917c;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

@@ -1,97 +1,109 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>À propos de Nous - Heure Facile</title>
-<link rel="stylesheet" href="about.css">
- <!-- font-awesome cdn -->
- <link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Heure Facile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-<!-- alert -->
-<div id="alert_lang">
-  <div id="alert_content">
-      <i id="alert_icon" class="fa fa-exclamation-circle" aria-hidden="true"></i>
-      <h1 id="alert_titre">Oops! <br>La traduction du site est temporairement inaccessible. <br>
-          Merci pour votre patience et compréhension.
-      </h1>
-      <button id="alert_btn" onclick="alert_btn()">OK</button>
-  </div>
-</div>
-<!-- header de page -->
-<header class="header">
-  <nav>
-      <ul class="list_header">
-          <li><img id="logo" src="../img_projet/logo.png" alt=""></a></li>
-          <div class="liste">
-              <li><a href="../page_acceil/acceil.html">acceill</a></li>
-              <li><a href="../page_jeu/index.html">jeu</a></li>
-              <li>
-                  <select onchange="alt_lang()" id="lang">
-                      <option value="">FR</option>
-                      <option value="">EN</option>
-                      <option value="">AR</option>
-                  </select>
-              </li>
-              <li><audio id="audio" src="../audio_projet/audio1.mp3"  loop></audio></li>
-              <li><i id="icon_music"  class="fa-regular fa-circle-play"></i></li>
-          </div>
-      </ul>
-  </nav>
-</header>
+    <!-- alert -->
+    <div id="alert_lang">
+        <div id="alert_content">
+            <i id="alert_icon" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <h1 id="alert_titre">Oops! <br>La traduction du site est temporairement inaccessible. <br>
+                Merci pour votre patience et compréhension.
+            </h1>
+            <button id="alert_btn" onclick="alert_btn()">OK</button>
+        </div>
+    </div>
 
-<div class="container">
-  <div class="section">
-    <h2>À propos de Nous</h2>
-    <p>Bienvenue sur Heure Facile ! Nous sommes une équipe de deux collègues passionnés par la simplification de l'apprentissage de l'heure à travers le JavaScript. Notre objectif est d'aider les gens à comprendre et à maîtriser l'art de lire l'heure de manière simple et accessible.</p>
-  </div>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <ul class="list_header">
+                <li><img id="logo" src="../public/assests/img_projet/logo.png" alt="Logo Heure Facile"></li>
+                <div class="liste">
+                    <li><a href="../public/index.html">accueil</a></li>
+                    <li><a href="../public/game.html">Jeu</a></li>
+                    <li>
+                        <select title="language" onchange="alt_lang()" id="lang">
+                            <option value="">FR</option>
+                            <option value="">EN</option>
+                            <option value="">AR</option>
+                        </select>
+                    </li>
+                    <li><audio id="audio" src="../public/assests/audio_projet/audio1.mp3" loop></audio></li>
+                    <li><i title="musique" id="icon_music" class="fa-regular fa-circle-play"></i></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="section">
-    <h2>Notre Mission</h2>
-    <p>Chez Heure Facile, nous croyons que tout le monde devrait pouvoir apprendre l'heure sans stress ni confusion. C'est pourquoi nous avons créé notre projet avec un seul but en tête : fournir une ressource conviviale et intuitive pour démystifier la lecture de l'heure.</p>
-  </div>
+    <!-- Main Content -->
+    <main class="about-section">
+        <h1 class="main-title">À Propos de Heure Facile</h1>
+        <p class="subtitle">Apprendre à lire l'heure n'a jamais été aussi amusant.</p>
 
-  <div class="section">
-    <h2>Notre Projet</h2>
-    <p>Notre projet JavaScript, Heure Facile, est conçu pour rendre l'apprentissage de l'heure aussi facile que possible. Avec une interface conviviale et des fonctionnalités simples, notre application vise à rendre l'expérience d'apprentissage agréable et efficace pour les utilisateurs de tous niveaux.</p>
-  </div>
+        <div class="about-content">
+            <h2>Notre Mission</h2>
+            <p><q>Heure Facile</q> est un projet éducatif né de la volonté de créer une expérience d'apprentissage interactive et engageante. Notre objectif est de fournir un outil simple et efficace pour aider les enfants et les débutants à maîtriser la lecture de l'heure de manière ludique. Nous croyons que le jeu est l'une des meilleures façons d'apprendre, et c'est cette philosophie qui est au cœur de notre projet.</p>
+        </div>
 
-  <div class="section">
-    <h2>Notre Engagement</h2>
-    <p>Chez Heure Facile, nous nous engageons à offrir une expérience exceptionnelle à nos utilisateurs. Nous sommes déterminés à fournir un support de qualité et à répondre aux besoins de notre communauté de manière proactive.</p>
-  </div>
-</div>
+        <div class="team-section">
+            <h2>Notre Équipe</h2>
+            <div class="team-cards">
+                <div class="card">
+                    <h3>Mme. MAHDAOUI</h3>
+                    <p>Superviseur du Projet</p>
+                </div>
+                <div class="card">
+                    <h3>M. Othman</h3>
+                    <p>Développeur</p>
+                </div>
+                <div class="card">
+                    <h3>M. Aymane</h3>
+                    <p>Développeur</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<!-- footer de page -->
-<footer class="footer">
-  <div class="footer_container">
-      <div>
-        <p><b>encadréé par:</b></p>
-        <span>MMe.MAHDAOUI</span>
-        <p><b>effectue par:</b></p>
-        <span>M.Othman</span><br>
-        <span>M.Aymane</span>
-      </div>
-      <div id="div_propos">
-          <a href="About.html">À Propos De Nous</a>
-          <p><q>Heure Facile</q>, un projet qui promet de vous offrir une expérience de jeu unique en son genre.</p>
-      </div>
-      <div>
-          <p><b>social média</b></p>
-          <ul>
-              <li><a href="">github</a></li>
-              <li><a href="">twiter</a></li>
-              <li><a href="">youtube</a></li>
-          </ul>
-      </div>
-  </div>
-  <h6 id="copyrite"><span>&copy</span>2023/03/26 <q>Heure Facile</q></h6>
-</footer>
-<!-- fichier js -->
-<script src="../page_acceil/acceil.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Heure Facile</h4>
+                <p><q>Un projet qui promet de vous offrir une expérience de jeu unique en son genre.</q></p>
+                <a href="../about_page/About.html" class="footer-link">À Propos De Nous</a>
+            </div>
+            <div class="footer-column">
+                <h4>Crédits</h4>
+                <p><b>Encadré par :</b> MMe. MAHDAOUI</p>
+                <p><b>Réalisé par :</b> M. Othman & M. Aymane</p>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Heure Facile. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../public/js/acceil.js"></script>
 </body>
 </html>
