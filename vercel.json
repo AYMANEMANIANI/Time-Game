@@ -1,3 +1,10 @@
 {
-  "public": "public"
+  "version": 2,
+  "public": "./",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/game", "destination": "/game.html" },
+    { "source": "/connexion", "destination": "/connexion.html" }
+  ]
 }
